@@ -1,6 +1,6 @@
 {
   "name": "react-native-multipeer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/lwansbrough/react-native-multipeer.git"
@@ -11,7 +11,7 @@
     "events": "^1.0.2"
   },
   "peerDependencies": {
-    "react-native": "^0.5.0"
+    "react-native": ">=0.4.3"
   },
   "main": "index.js",
   "keywords": [
