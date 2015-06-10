@@ -164,6 +164,11 @@ Send data to specific peers in the current channel. `recipients` is an array of 
 
 `MultipeerConnectivity` inherits from `EventEmitter` - as such the `.on` method is available for listening to important events. Below is a list of those events.
 
+#### `data`
+
+Event properties: `Peer sender`, `data`
+
+Fired when new data is received from `sender`.
 
 #### `peerFound`
 
