@@ -1,12 +1,12 @@
-var React = require('react-native');
-var { DeviceEventEmitter, NativeModules } = React;
-var EventEmitter = require('events').EventEmitter;
-var RCTMultipeerConnectivity = NativeModules.MultipeerConnectivity;
-var Peer = require('./Peer');
+import React, { DeviceEventEmitter, NativeModules } from 'react-native';
+import { EventEmitter } from 'events';
+import Peer from './Peer';
+let RCTMultipeerConnectivity = NativeModules.MultipeerConnectivity;
 
-class MultipeerConnection extends EventEmitter {
+export default class MultipeerConnection extends EventEmitter {
   
   constructor() {
+    super();
     this._peers = {};
     this._connectedPeers = {};
     var peerFound = DeviceEventEmitter.addListener(
@@ -130,5 +130,3 @@ class MultipeerConnection extends EventEmitter {
 //    RCTMultipeerConnectivity.createStreamForPeer(peerId, name, callback);
 //  }
 }
-
-module.exports = MultipeerConnection;

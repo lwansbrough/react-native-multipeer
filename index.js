@@ -1,2 +1,2 @@
-var MultipeerConnection = require('./MultipeerConnection');
+import MultipeerConnection from './MultipeerConnection';
 module.exports = new MultipeerConnection();

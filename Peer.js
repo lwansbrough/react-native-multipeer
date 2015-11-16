@@ -1,10 +1,8 @@
-var EventEmitter = require('events').EventEmitter;
+import { EventEmitter } from 'events';
 
-class Peer extends EventEmitter {
+export default class Peer extends EventEmitter {
   constructor(id, name) {
     this.id = id;
     this.name = name;
   }
 }
-
-module.exports = Peer;
