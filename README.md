@@ -44,8 +44,8 @@ var peerApp = React.createClass({
     return getStateFromSources()
   },
   componentDidMount() {
-    MultipeerConnectivity.on('peerFound', this._onChange());
-    MultipeerConnectivity.on('peerLost', this._onChange());
+    MultipeerConnectivity.on('peerFound', this._onChange);
+    MultipeerConnectivity.on('peerLost', this._onChange);
     MultipeerConnectivity.on('invite', ((event) => {
       // Automatically accept invitations
       MultipeerConnectivity.rsvp(event.invite.id, true);
