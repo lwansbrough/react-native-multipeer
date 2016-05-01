@@ -118,9 +118,17 @@ export default class MultipeerConnection extends EventEmitter {
   advertise(channel, info) {
     RCTMultipeerConnectivity.advertise(channel, info);
   }
+
+  stopAdvertise(channel) {
+    RCTMultipeerConnectivity.stopAdvertise(channel, null);
+  }
   
   browse(channel) {
     RCTMultipeerConnectivity.browse(channel);
+  }
+
+  stopBrowse(channel) {
+    RCTMultipeerConnectivity.stopBrowse(channel);
   }
   
 //  createStreamForPeer(peerId, name, callback) {
