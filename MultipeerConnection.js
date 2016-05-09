@@ -45,9 +45,11 @@ export default class MultipeerConnection extends EventEmitter {
     var peerDisconnected = DeviceEventEmitter.addListener(
       'RCTMultipeerConnectivityPeerDisconnected',
       ((event) => {
-        this._peers[event.peer.id].emit('disconnected');
-        delete this._connectedPeers[event.peer.id];
-        this.emit('peerDisconnected', event);
+        if(this._peers[event.peer.id]) {
+          this._peers[event.peer.id].emit('disconnected');
+          delete this._connectedPeers[event.peer.id];
+          this.emit('peerDisconnected', event);
+        };
       }).bind(this));
       
     var streamOpened = DeviceEventEmitter.addListener(
@@ -59,7 +61,7 @@ export default class MultipeerConnection extends EventEmitter {
     var invited = DeviceEventEmitter.addListener(
       'RCTMultipeerConnectivityInviteReceived',
       ((event) => {
-        event.sender = this._peers[event.sender.id];
+        event.sender = this._peers[event.peer.id];
         this.emit('invite', event);
       }).bind(this));
       
