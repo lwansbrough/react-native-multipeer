@@ -1,5 +1,4 @@
 #import "RCTMultipeerConnectivity.h"
-#import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 //#import "ObjectStore.h"
 
