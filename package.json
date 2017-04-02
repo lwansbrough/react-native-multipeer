@@ -2,13 +2,14 @@
   "name": "react-native-multipeer",
   "version": "0.1.1",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/lwansbrough/react-native-multipeer.git"
+    "type": "git",
+    "url": "https://github.com/lwansbrough/react-native-multipeer.git"
   },
   "author": "Lochlan Wansbrough <lochie@live.com> (http://lwansbrough.com)",
   "description": "Communicate over ad hoc wifi using Multipeer Connectivity",
   "dependencies": {
-    "events": "^1.0.2"
+    "events": "^1.0.2",
+    "react": "^15.4.2"
   },
   "main": "index.js",
   "keywords": [
